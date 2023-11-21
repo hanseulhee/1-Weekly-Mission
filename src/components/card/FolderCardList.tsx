@@ -1,19 +1,19 @@
-import FolderCard from "components/card/FolderCard";
+import Card from "components/card/Card";
 
 interface Props {
-  data?: Folder;
+  links?: FolderLinks[];
 }
 
-function FolderCardList({ data }: Props) {
+function FolderCardList({ links }: Props) {
   return (
     <>
-      {data?.folder.links.map((item) => (
-        <FolderCard
-          key={item.id}
-          url={item.url}
-          description={item.description}
-          createdAt={item.createdAt}
-          imageSource={item.imageSource}
+      {links?.map((link) => (
+        <Card
+          key={link.id}
+          url={link.url}
+          description={link.description}
+          createdAt={link.createdAt}
+          imageSource={link.imageSource}
         />
       ))}
     </>

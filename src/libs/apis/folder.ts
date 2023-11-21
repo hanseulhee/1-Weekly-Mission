@@ -1,3 +1,4 @@
+import { AxiosResponse } from "axios";
 import { instance } from "libs/api";
 
 export async function getUserSampleFolder() {
@@ -6,6 +7,8 @@ export async function getUserSampleFolder() {
 }
 
 export async function getUserFolderList() {
-  const response = await instance.get<{}, UserFolder>("/api/users/1/folders");
-  return response;
+  const response = await instance.get<{}, AxiosResponse<UserFolder[]>>(
+    "/api/users/1/folders"
+  );
+  return response.data;
 }

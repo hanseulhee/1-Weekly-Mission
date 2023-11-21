@@ -1,8 +1,0 @@
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.3rem;
-  color: rgb(149, 156, 169);
-  font-size: 1.2rem;
-}

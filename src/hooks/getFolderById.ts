@@ -6,7 +6,7 @@ interface Props {
 }
 
 function useGetFolderById({ folderId }: Props) {
-  const [folderById, setFolderById] = useState<LinkData[]>([]);
+  const [folderById, setFolderById] = useState<Link>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function useGetFolderById({ folderId }: Props) {
         `/api/users/1/links?folderId=${folderId}`
       );
 
-      setFolderById(response.data);
+      setFolderById(response);
       setIsLoading(false);
     }
 

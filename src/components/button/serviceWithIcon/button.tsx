@@ -1,4 +1,4 @@
-import styles from "styles/modules/serviceWithIcon.module.css";
+import styled from "styled-components";
 
 interface Props {
   img: string;
@@ -7,11 +7,20 @@ interface Props {
 
 function Button({ img, title }: Props) {
   return (
-    <div className={styles.wrapper}>
-      <img src={img} alt={title} className={styles.icon} />
-      <span className={styles.title}>{title}</span>
-    </div>
+    <StyledWrapper>
+      <img src={img} alt={title} />
+      <span>{title}</span>
+    </StyledWrapper>
   );
 }
 
 export default Button;
+
+const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+  color: rgb(149, 156, 169);
+  font-size: 1.2rem;
+`;
