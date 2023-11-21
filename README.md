@@ -9,3 +9,5 @@
 [week7](./docs/week7/README.md)
 
 [week8](./docs/week8/README.md)
+
+[week12](./docs/week12/README.md)
